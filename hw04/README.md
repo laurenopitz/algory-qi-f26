@@ -4,8 +4,8 @@
 For this project, I built a Python backtester to test different trading strategies using historical S&P 500 data starting in 1990. The program uses the last 60 trading days to decide whether to hold cash or invest in the S&P 500. 
 
 ## Files
-- 'hw04_starter.py' — strategies, backtester, performance calculations, plots, and current trading signal.
-- `check_hw04.py' and `_check.py' — provided self-checks for backtest correctness.
+- 'hw04_starter.py' — strategies, backtester, calculations, and plots.
+- `check_hw04.py' and `_check.py' — provided self-check files.
 
 ## How the backtester works
 I downloaded daily '^SP500TR' closing prices starting January 1, 1990. The backtester starts with $1 and calculates how much the portfolio would grow over time based on each strategy's decisions. Each strategy uses the previous 60 trading days of closing prices to decide whether to invest in the index or hold cash. If the strategy returns 'True', the portfolio earns the index's next day return, otherwise, it holds cash with a 0% return. Strategies can only access prices that were available when the trading decision was made, so future information is not used. 
